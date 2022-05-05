@@ -315,10 +315,16 @@
                 <textarea class="modal-form-textarea" type="text" name="textarea" id="comment" placeholder="Введите текст"></textarea>
 
                 <div class="agreement">
-                <input class="checkbox-modal-form" type="checkbox" class="" name="" required>
-                    <span>Соглашаюсь с рассылкой и принимаю  <a href=""> Условия договора</a> </span>
+                <input class="checkbox-modal-form" type="checkbox" name="label-checkbox" id="label-checkbox" required>
+                
+                <span class="holder-checkbox-icon">
+                    <svg class="checkbox-icon" style="width: 16px; height: 15px;">
+                        <use href="./images/sprite.svg#icon-check"></use>
+                    </svg>
+                </span>
+                <label class="label-checkbox-modal-form" for="label-checkbox">Соглашаюсь с рассылкой и принимаю <a href=""> Условия договора</a></label>
                 </div>
-                <button class="btn-modal-form" type="submit"></button>
+                <button class="btn-modal-submit" type="submit">Отправить</button>
             </form>
         </div>
     </div>
