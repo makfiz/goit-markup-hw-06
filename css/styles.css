@@ -398,6 +398,7 @@ h2 {
 /* Постоянные клиенты */
 .clients {
   display: flex;
+  justify-content: space-between;
 }
 
 .client {
@@ -409,10 +410,6 @@ h2 {
   border-radius: 4px;
   fill: #afb1b8;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.clients li + li {
-  margin-left: 30px;
 }
 
 .client-card {
@@ -476,6 +473,11 @@ address li + li {
   color: rgba(255, 255, 255, 0.6);
 }
 
+.right-holder {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .social-links-footer-parent {
   margin: 0px 0px 0px 70px;
   padding-top: 11px;
@@ -520,7 +522,7 @@ address li + li {
 }
 
 .e-mail-input-footer {
-  margin: 0px 0px 0px 93px;
+  margin: 0px 0px 0px auto;
   padding-top: 11px;
 }
 
