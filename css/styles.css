@@ -56,12 +56,12 @@ img {
   height: auto;
 }
 
-.nav-links {
+.nav__links {
   display: block;
   position: relative;
   color: #212121;
 }
-.nav-links.curent-link {
+.nav__links.curent-link {
   color: var(--accent-text-color);
 }
 
@@ -106,9 +106,7 @@ header li:last-child {
   margin-right: 0px;
 }
 /* Menu Nav */
-.logo-nav {
-  margin-right: 93px;
-
+.logo {
   font-family: 'Raleway';
   font-style: normal;
   font-weight: bold;
@@ -119,7 +117,11 @@ header li:last-child {
   display: flex;
   align-items: center;
 }
-.logo-nav > span {
+
+.logo-nav {
+  margin-right: 93px;
+}
+.logo__text {
   color: var(--accent-text-color);
 }
 
@@ -137,7 +139,7 @@ header ul {
 nav + .list {
   margin-left: auto;
 }
-.contacts-header {
+.contactsHeader__link {
   display: flex;
   font-style: normal;
   font-weight: 500;
@@ -147,7 +149,7 @@ nav + .list {
   color: var(--primary-text-color);
 }
 
-.header-icon {
+.contactsHeader__icon {
   width: 16px;
   height: 16px;
   margin: 0px 10px;
@@ -220,22 +222,20 @@ main {
 .btn:hover,
 .btn:focus,
 .btn-submit:hover,
-.btn-submit:focus,
-.btn-modal-submit:hover,
-.btn-modal-submit:focus {
+.btn-submit:focus {
   background-color: #188ce8;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
-.our-advantages {
+.Feature {
   display: inline-flex;
 }
 
-.our-advantages li + li {
+.Feature li + li {
   margin-left: 30px;
 }
 
-.our-advantages h3 {
+.Feature h3 {
   margin: 0;
   padding: 0;
   font-style: normal;
@@ -245,7 +245,7 @@ main {
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
-.Feature > p {
+.Feature__list > p {
   margin: 10px 0px 0px 0px;
   font-style: normal;
   font-weight: 400;
@@ -255,7 +255,7 @@ main {
   color: var(--primary-text-color);
 }
 
-.Feature-icon {
+.Feature__icon {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -478,12 +478,12 @@ address li + li {
   justify-content: flex-end;
 }
 
-.social-links-footer-parent {
+.soclinks-footer {
   margin: 0px 0px 0px 70px;
   padding-top: 11px;
 }
 
-.footer-h2 {
+.soclinks-footer__h2 {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
@@ -496,7 +496,7 @@ address li + li {
   color: #ffffff;
 }
 
-.social-links-footer {
+.soclinks-footer__link {
   display: inline-flex;
   box-sizing: content-box;
   padding: 12px;
@@ -506,31 +506,31 @@ address li + li {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-links-footer:hover,
-.social-links-footer:focus {
+.soclinks-footer__link:hover,
+.soclinks-footer__link:focus {
   background-color: var(--accent-text-color);
 }
 
-.social-links-footer + .social-links-footer {
+.soclinks-footer__link + .soclinks-footer__link {
   margin-left: 10px;
 }
 
-.social-links-footer-icon {
+.soclinks-footer__icon {
   fill: #fff;
   height: 20px;
   width: 20px;
 }
 
-.e-mail-input-footer {
+.subscribe-footer {
   margin: 0px 0px 0px auto;
   padding-top: 11px;
 }
 
-.e-mail-input-footer form {
+.subform {
   display: flex;
 }
 
-.e-mail-input {
+.subform__email-input {
   width: 358px;
   height: 50px;
   margin-right: 12px;
@@ -542,7 +542,7 @@ address li + li {
   padding: 15px;
 }
 
-.btn-submit {
+.subform__btn-submit {
   display: inline-flex;
   box-sizing: border-box;
   width: 200px;
@@ -562,9 +562,15 @@ address li + li {
   color: var(--white-text-color);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.submit-btn-icon {
+.subform__btn-icon {
   margin-left: 10px;
   fill: #fff;
+}
+
+.subform__btn-submit:hover,
+.subform__btn-submit:focus {
+  background-color: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* ____________________________________________Overlay + modal___________________________________________________*/
@@ -610,13 +616,18 @@ address li + li {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), filter 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), filter 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
 }
 .modal-btn:hover,
-.modal-btn:focus,
+.modal-btn:focus {
+  border: 1px solid var(--accent-text-color);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
 .modal-btn:hover .modal-btn-icon,
 .modal-btn:focus .modal-btn-icon {
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   fill: var(--accent-text-color);
 }
 
@@ -917,3 +928,4 @@ address li + li {
   color: var(--primary-text-color);
   margin: 0;
 }
+
